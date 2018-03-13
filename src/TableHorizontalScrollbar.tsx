@@ -164,8 +164,6 @@ export class TableHorizontalScrollbar extends React.Component<IProps, IState> {
   }
 
   private onMouseDown = (event: MouseEvent): void => {
-    event.preventDefault();
-
     this.setState({
       isMoving: true,
       previousMoveClientX: event.clientX
@@ -173,8 +171,6 @@ export class TableHorizontalScrollbar extends React.Component<IProps, IState> {
   };
 
   private onMouseMove = (event: MouseEvent): void => {
-    event.preventDefault();
-
     /* tslint:disable:prefer-const */
     let {
       percentageScrolled,
@@ -212,8 +208,6 @@ export class TableHorizontalScrollbar extends React.Component<IProps, IState> {
   };
 
   private onMouseUp = (event: MouseEvent): void => {
-    event.preventDefault();
-
     const { isMoving } = this.state;
 
     if (!isMoving) {

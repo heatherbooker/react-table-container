@@ -349,8 +349,6 @@ export default class ReactTableContainer extends React.Component<
   }
 
   private onWheel = (event: WheelEvent): void => {
-    event.preventDefault();
-
     /* tslint:disable:prefer-const */
     let {
       containerWidth,
@@ -423,8 +421,6 @@ export default class ReactTableContainer extends React.Component<
   };
 
   private onTouchMove = (event: TouchEvent): void => {
-    event.preventDefault();
-
     /* tslint:disable:prefer-const */
     let {
       containerWidth,
